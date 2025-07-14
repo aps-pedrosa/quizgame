@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://dys4r4461yed4"]
+[gd_scene load_steps=9 format=3 uid="uid://vxoxf07ncggk"]
 
 [ext_resource type="Texture2D" uid="uid://c80wyehcmbnsx" path="res://Square Buttons 26x26.png" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://b88tlyfghfynd" path="res://scoreScript.gd" id="1_kwhr1"]
 [ext_resource type="FontFile" uid="uid://ld407tfxyrmy" path="res://bjg-pixel-brandon-james-greer.otf" id="2_h2yge"]
 [ext_resource type="Script" uid="uid://dtiakuntpds2c" path="res://button_5.gd" id="3_1bvp3"]
 [ext_resource type="Script" path="res://on_screen_timer.gd" id="4_1bvp3"]
+[ext_resource type="Script" uid="uid://bvlpexn8o6bu7" path="res://scripts/scoreScript.gd" id="5_lquwl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0xm2m"]
 texture = ExtResource("1_ig7tw")
@@ -84,6 +86,7 @@ texture = ExtResource("1_ig7tw")
 sources/0 = SubResource("TileSetAtlasSource_0xm2m")
 
 [node name="main_Pergunta" type="Node2D"]
+script = ExtResource("1_kwhr1")
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
@@ -126,7 +129,6 @@ theme_override_fonts/font = ExtResource("2_h2yge")
 text = "MQTT
 "
 icon_alignment = 1
-script = ExtResource("3_1bvp3")
 
 [node name="Button9" type="Button" parent="VBoxContainer/HBoxContainer"]
 texture_filter = 1
@@ -135,7 +137,6 @@ size_flags_horizontal = 3
 theme_override_fonts/font = ExtResource("2_h2yge")
 text = "DNS"
 icon_alignment = 1
-script = ExtResource("3_1bvp3")
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
@@ -148,7 +149,6 @@ size_flags_horizontal = 3
 theme_override_fonts/font = ExtResource("2_h2yge")
 text = "DHCP"
 icon_alignment = 1
-script = ExtResource("3_1bvp3")
 
 [node name="Button7" type="Button" parent="VBoxContainer/HBoxContainer2"]
 texture_filter = 1
@@ -175,6 +175,23 @@ text = "	"
 metadata/_edit_use_anchors_ = true
 
 [node name="Timer" type="Timer" parent="onScreenTimer"]
+
+[node name="onScreenScore" type="Node2D" parent="."]
+unique_name_in_owner = true
+script = ExtResource("5_lquwl")
+
+[node name="Label" type="Label" parent="onScreenScore"]
+texture_filter = 1
+offset_left = 35.0
+offset_top = 95.0
+offset_right = 155.0
+offset_bottom = 127.0
+theme_override_fonts/font = ExtResource("2_h2yge")
+
+[node name="Grupo1Vs" type="Sprite2D" parent="onScreenScore"]
+texture_filter = 1
+position = Vector2(68, 83)
+scale = Vector2(1.52222, 1.375)
 
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/Button8" to="VBoxContainer/HBoxContainer/Button8" method="_on_pressed"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/Button9" to="VBoxContainer/HBoxContainer/Button9" method="_on_pressed"]
