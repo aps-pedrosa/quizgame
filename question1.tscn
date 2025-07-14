@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dqbp2gmlohpvf"]
+[gd_scene load_steps=15 format=3 uid="uid://dqbp2gmlohpvf"]
 
 [ext_resource type="Script" uid="uid://dakbt4h6pxq66" path="res://question_1.gd" id="1_4qed5"]
 [ext_resource type="Texture2D" uid="uid://bf7q40ed7eisv" path="res://assets/backgrounds/fundowifi.png" id="1_7bpjx"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://qkjt47d6l64r" path="res://assets/grupos/grupo4sprite.png" id="6_kf5vr"]
 [ext_resource type="Script" uid="uid://dtiakuntpds2c" path="res://button_5.gd" id="6_qtp5m"]
 [ext_resource type="Script" uid="uid://bkg4s7mpkvlh6" path="res://game_manager.gd" id="10_kf5vr"]
+[ext_resource type="Script" uid="uid://b6kwj670qbiyx" path="res://timer.gd" id="11_qtp5m"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_so5y4"]
 texture = ExtResource("1_7bpjx")
@@ -121,6 +122,7 @@ layer_0/tile_data = PackedInt32Array(196611, 65536, 1, 196612, 65536, 1, 262147,
 script = ExtResource("3_uye2t")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
 offset_left = 28.0
 offset_top = 89.0
 offset_right = 484.0
@@ -309,6 +311,7 @@ text = "HTTP"
 
 [node name="Label" type="Label" parent="."]
 texture_filter = 1
+layout_mode = 0
 offset_left = 52.0
 offset_top = 38.0
 offset_right = 471.0
@@ -325,12 +328,33 @@ autowrap_mode = 1
 unique_name_in_owner = true
 script = ExtResource("10_kf5vr")
 
-[node name="Timer" type="Timer" parent="."]
-unique_name_in_owner = true
-wait_time = 20.0
+[node name="onScreenTimer" type="Node2D" parent="."]
+script = ExtResource("11_qtp5m")
+
+[node name="Timer" type="Timer" parent="onScreenTimer"]
+
+[node name="Label" type="Label" parent="onScreenTimer"]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 242.0
+offset_top = 96.0
+offset_right = 272.0
+offset_bottom = 120.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.109626, 0.121935, 0.118427, 1)
+theme_override_fonts/font = ExtResource("4_jbhae")
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/Button8" to="VBoxContainer/HBoxContainer/Button8" method="_on_pressed"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/Button9" to="VBoxContainer/HBoxContainer/Button8" method="_on_button_9_pressed"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/Button9" to="VBoxContainer/HBoxContainer/Button9" method="_on_pressed"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer2/Button6" to="VBoxContainer/HBoxContainer2/Button6" method="_on_pressed"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer2/Button7" to="VBoxContainer/HBoxContainer2/Button7" method="_on_pressed"]
+[connection signal="timeout" from="onScreenTimer/Timer" to="onScreenTimer" method="_on_timer_timeout"]

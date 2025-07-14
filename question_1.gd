@@ -10,9 +10,10 @@ extends Control
 
 var done = true
 var turn = 0
-var start = false
-# game_manager.points[1] pontos do time 2
-# game_manager.points[3] pontos do time 4
+var times_up = false
+var team1 = 1 # pontos do time 2
+var team2 = 3 # pontos do time 4
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -20,16 +21,17 @@ func _ready() -> void:
 	wrong1a.visible = false
 	wrong1c.visible = false
 	wrong1d.visible = false
+	
 
 func _input(event) -> void:
 	if Input.is_action_just_pressed("player1"):
 		turn = 1
 		done = false
-		start = true
+		# Input.action_press("start_timer")
 	elif Input.is_action_just_pressed("player2"):
 		turn = 2
 		done = false
-		start = true
+		# Input.action_press("start_timer")
 	elif done == false:
 		if Input.is_action_just_pressed("optionB"):
 			correct1.visible = true
@@ -38,39 +40,39 @@ func _input(event) -> void:
 			wrong1c.visible = true
 			done = true
 			if turn == 1:
-				game_manager.points[1] += 5
+				game_manager.points[team1] += 5
 			elif turn == 2:
-				game_manager.points[3] += 5
+				game_manager.points[team2] += 5
 
 		elif Input.is_action_just_pressed("optionA"):
 			wrong1a.visible = true
 			if turn == 1:
-				game_manager.points[1] -= 2
+				game_manager.points[team1] -= 2
 				turn = 2
 			elif turn == 2:
-				game_manager.points[3] -= 2
+				game_manager.points[team2] -= 2
 				turn = 1
 
 		elif Input.is_action_just_pressed("optionC"):
 			wrong1c.visible = true
 			if turn == 1:
-				game_manager.points[1] -= 2
+				game_manager.points[team1] -= 2
 				turn = 2
 			elif turn == 2:
-				game_manager.points[3] -= 2
+				game_manager.points[team2] -= 2
 				turn = 1
 
 		elif Input.is_action_just_pressed("optionD"):
 			wrong1d.visible = true
 			if turn == 1:
-				game_manager.points[1] -= 2
+				game_manager.points[team1] -= 2
 				turn = 2
 			elif turn == 2:
-				game_manager.points[3] -= 2
+				game_manager.points[team2] -= 2
 				turn = 1
 
-		print("2: ", game_manager.points[1])
-		print("4: ", game_manager.points[3])
+		print("2: ", game_manager.points[team1])
+		print("4: ", game_manager.points[team2])
 
 	if Input.is_action_just_pressed("ui_accept") and done == true:
 		get_tree().change_scene_to_file("res://ranks.tscn")
