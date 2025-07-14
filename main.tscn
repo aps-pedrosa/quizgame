@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://qsaxw8fb0mmo"]
+[gd_scene load_steps=9 format=3 uid="uid://qsaxw8fb0mmo"]
 
 [ext_resource type="Texture2D" uid="uid://c80wyehcmbnsx" path="res://Square Buttons 26x26.png" id="1_ig7tw"]
 [ext_resource type="FontFile" uid="uid://ld407tfxyrmy" path="res://bjg-pixel-brandon-james-greer.otf" id="2_h2yge"]
 [ext_resource type="Script" uid="uid://c0vk3sdrbdagy" path="res://socket_listener.gd" id="4_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://bpcciv55cdi1s" path="res://assets/buttons/questions.png" id="4_lquwl"]
 [ext_resource type="Script" uid="uid://dtiakuntpds2c" path="res://button_5.gd" id="5_7mycd"]
+[ext_resource type="Script" uid="uid://bkg4s7mpkvlh6" path="res://game_manager.gd" id="6_7mycd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7mycd"]
 texture = ExtResource("1_ig7tw")
@@ -284,6 +285,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="GameManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("6_7mycd")
 
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/Button8" to="VBoxContainer/HBoxContainer/Button8" method="_on_pressed"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/Button9" to="VBoxContainer/HBoxContainer/Button8" method="_on_button_9_pressed"]

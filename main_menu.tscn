@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dcpdgnrvb1cfx"]
+[gd_scene load_steps=18 format=3 uid="uid://dcpdgnrvb1cfx"]
 
 [ext_resource type="FontFile" uid="uid://bsvi8y5khs7nn" path="res://brandon-james-greer.ttf" id="1_7vrkn"]
 [ext_resource type="Script" uid="uid://cmnwqo4kdoix5" path="res://main_menu.gd" id="1_glbon"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://blq07roru3ckq" path="res://assets/buttons/button_exit_p.png" id="10_g8g3n"]
 [ext_resource type="Texture2D" uid="uid://dtujdhx6o0umc" path="res://assets/buttons/button_exit_h.png" id="11_8u0te"]
 [ext_resource type="Texture2D" uid="uid://c80wyehcmbnsx" path="res://Square Buttons 26x26.png" id="13_iotk1"]
+[ext_resource type="Script" uid="uid://bkg4s7mpkvlh6" path="res://game_manager.gd" id="14_w44g7"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jix8l"]
 texture = ExtResource("2_glbon")
@@ -204,6 +205,10 @@ theme_override_font_sizes/font_size = 5
 text = "regras:
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id erat vitae est consequat pharetra. Ut ultricies convallis nisi, a hendrerit leo pulvinar et. Nulla magna leo, tempor sed dui lacinia, blandit consequat lorem. Phasellus eget ultricies est. Cras pellentesque laoreet ligula sed cursus. In dignissim ligula nisl."
 autowrap_mode = 1
+
+[node name="GameManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("14_w44g7")
 
 [connection signal="pressed" from="VBoxContainer/TextureButton" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/TextureButton2" to="." method="_on_rules_pressed"]

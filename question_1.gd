@@ -1,26 +1,76 @@
 extends Control
 @onready var correct1: Label = $VBoxContainer/HBoxContainer/Button9/Label2
-@onready var wrong1b: Label = $VBoxContainer/HBoxContainer2/Button6/Label
-@onready var wrong1c: Label = $VBoxContainer/HBoxContainer2/Button7/Label
+@onready var wrong1c: Label = $VBoxContainer/HBoxContainer2/Button6/Label
+@onready var wrong1d: Label = $VBoxContainer/HBoxContainer2/Button7/Label
 @onready var wrong1a: Label = $VBoxContainer/HBoxContainer/Button8/Label
 
-var pontosA = 0.0
+@onready var game_manager: Node = %GameManager
+
+@onready var timer: Timer = %Timer
+
+var done = true
+var turn = 0
+var start = false
+# game_manager.points[1] pontos do time 2
+# game_manager.points[3] pontos do time 4
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	correct1.visible = false
 	wrong1a.visible = false
-	wrong1b.visible = false
 	wrong1c.visible = false
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+	wrong1d.visible = false
 
 func _input(event) -> void:
-	if Input.is_action_just_pressed("correct"):
-		pontosA += 5
-		correct1.visible = true
-		wrong1a.visible = true
-		wrong1b.visible = true
-		wrong1c.visible = true
+	if Input.is_action_just_pressed("player1"):
+		turn = 1
+		done = false
+		start = true
+	elif Input.is_action_just_pressed("player2"):
+		turn = 2
+		done = false
+		start = true
+	elif done == false:
+		if Input.is_action_just_pressed("optionB"):
+			correct1.visible = true
+			wrong1a.visible = true
+			wrong1d.visible = true
+			wrong1c.visible = true
+			done = true
+			if turn == 1:
+				game_manager.points[1] += 5
+			elif turn == 2:
+				game_manager.points[3] += 5
+
+		elif Input.is_action_just_pressed("optionA"):
+			wrong1a.visible = true
+			if turn == 1:
+				game_manager.points[1] -= 2
+				turn = 2
+			elif turn == 2:
+				game_manager.points[3] -= 2
+				turn = 1
+
+		elif Input.is_action_just_pressed("optionC"):
+			wrong1c.visible = true
+			if turn == 1:
+				game_manager.points[1] -= 2
+				turn = 2
+			elif turn == 2:
+				game_manager.points[3] -= 2
+				turn = 1
+
+		elif Input.is_action_just_pressed("optionD"):
+			wrong1d.visible = true
+			if turn == 1:
+				game_manager.points[1] -= 2
+				turn = 2
+			elif turn == 2:
+				game_manager.points[3] -= 2
+				turn = 1
+
+		print("2: ", game_manager.points[1])
+		print("4: ", game_manager.points[3])
+
+	if Input.is_action_just_pressed("ui_accept") and done == true:
+		get_tree().change_scene_to_file("res://ranks.tscn")
