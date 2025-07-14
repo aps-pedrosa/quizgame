@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://qsaxw8fb0mmo"]
+[gd_scene load_steps=7 format=3 uid="uid://qsaxw8fb0mmo"]
 
 [ext_resource type="Texture2D" uid="uid://c80wyehcmbnsx" path="res://Square Buttons 26x26.png" id="1_ig7tw"]
 [ext_resource type="FontFile" uid="uid://bsvi8y5khs7nn" path="res://brandon-james-greer.ttf" id="2_0xm2m"]
 [ext_resource type="FontFile" uid="uid://ld407tfxyrmy" path="res://bjg-pixel-brandon-james-greer.otf" id="2_h2yge"]
+[ext_resource type="Script" uid="uid://c0vk3sdrbdagy" path="res://socket_listener.gd" id="4_1bvp3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0xm2m"]
 texture = ExtResource("1_ig7tw")
@@ -92,14 +93,20 @@ layer_0/tile_data = PackedInt32Array(196611, 65536, 1, 196612, 65536, 1, 262147,
 
 [node name="Button" type="Button" parent="."]
 texture_filter = 1
-offset_left = 308.0
-offset_top = 114.0
-offset_right = 455.0
-offset_bottom = 174.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 180.0
+offset_top = 113.0
+offset_right = 327.0
+offset_bottom = 173.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_fonts/font = ExtResource("2_h2yge")
 theme_override_font_sizes/font_size = 5
-text = "coisas da vida e do cuzin
-da sua mae"
+text = "coisas da vida"
 icon_alignment = 1
 
 [node name="Button2" type="Button" parent="."]
@@ -128,3 +135,6 @@ offset_bottom = 252.0
 theme_override_fonts/font = ExtResource("2_0xm2m")
 text = "a"
 icon_alignment = 1
+
+[node name="SocketListener" type="Node" parent="."]
+script = ExtResource("4_1bvp3")
