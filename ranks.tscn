@@ -1,5 +1,6 @@
-[gd_scene load_steps=18 format=3 uid="uid://dwpme4mkm38s"]
+[gd_scene load_steps=20 format=3 uid="uid://dwpme4mkm38s"]
 
+[ext_resource type="Script" uid="uid://hw1q74l5g8rl" path="res://ranks.gd" id="1_pt717"]
 [ext_resource type="Texture2D" uid="uid://c80wyehcmbnsx" path="res://Square Buttons 26x26.png" id="2_4w0ss"]
 [ext_resource type="Texture2D" uid="uid://bmxrwub3ywiuo" path="res://assets/grupos/grupo1vs.png" id="2_m0t4v"]
 [ext_resource type="Texture2D" uid="uid://boekd1r0welgk" path="res://start_background.png" id="2_pt717"]
@@ -13,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://u8ruqjy6yy3t" path="res://assets/grupos/1lugar.png" id="8_pt717"]
 [ext_resource type="Texture2D" uid="uid://bfipcgpqf3pmv" path="res://assets/grupos/2lugar.png" id="9_j517y"]
 [ext_resource type="Texture2D" uid="uid://c2t52w2c4ge5w" path="res://assets/grupos/3lugar.png" id="10_5e8am"]
+[ext_resource type="Script" uid="uid://bkg4s7mpkvlh6" path="res://game_manager.gd" id="15_j517y"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j517y"]
 texture = ExtResource("2_pt717")
@@ -156,6 +158,7 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_pt717")
 
 [node name="Panel" type="Panel" parent="."]
 texture_filter = 1
@@ -239,32 +242,32 @@ grow_vertical = 2
 layout_mode = 2
 theme_override_constants/separation = 6
 
-[node name="TextureButton" type="TextureButton" parent="HBoxContainer/VBoxContainer"]
+[node name="T1" type="TextureButton" parent="HBoxContainer/VBoxContainer"]
 texture_filter = 1
 layout_mode = 2
 texture_normal = ExtResource("2_m0t4v")
 
-[node name="TextureButton2" type="TextureButton" parent="HBoxContainer/VBoxContainer"]
+[node name="T2" type="TextureButton" parent="HBoxContainer/VBoxContainer"]
 texture_filter = 1
 layout_mode = 2
 texture_normal = ExtResource("3_mbl1o")
 
-[node name="TextureButton3" type="TextureButton" parent="HBoxContainer/VBoxContainer"]
+[node name="T3" type="TextureButton" parent="HBoxContainer/VBoxContainer"]
 texture_filter = 1
 layout_mode = 2
 texture_normal = ExtResource("4_yh1v8")
 
-[node name="TextureButton4" type="TextureButton" parent="HBoxContainer/VBoxContainer"]
+[node name="T4" type="TextureButton" parent="HBoxContainer/VBoxContainer"]
 texture_filter = 1
 layout_mode = 2
 texture_normal = ExtResource("5_4w0ss")
 
-[node name="TextureButton5" type="TextureButton" parent="HBoxContainer/VBoxContainer"]
+[node name="T5" type="TextureButton" parent="HBoxContainer/VBoxContainer"]
 texture_filter = 1
 layout_mode = 2
 texture_normal = ExtResource("6_0jnj1")
 
-[node name="TextureButton6" type="TextureButton" parent="HBoxContainer/VBoxContainer"]
+[node name="T6" type="TextureButton" parent="HBoxContainer/VBoxContainer"]
 texture_filter = 1
 layout_mode = 2
 texture_normal = ExtResource("7_ty12v")
@@ -286,3 +289,7 @@ texture_normal = ExtResource("9_j517y")
 texture_filter = 1
 layout_mode = 2
 texture_normal = ExtResource("10_5e8am")
+
+[node name="GameManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("15_j517y")
