@@ -18,7 +18,7 @@ func _process(delta: float) -> void:
 
 func _on_start_pressed() -> void:
 	questionID = 1
-	get_tree().change_scene_to_file("res://scenes/question1.tscn")
+	get_tree().change_scene_to_file("res://scenes/questions/question1.tscn")
 
 
 func _on_rules_pressed() -> void:
