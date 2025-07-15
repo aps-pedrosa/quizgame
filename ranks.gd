@@ -23,7 +23,7 @@ func _ready():
 	]
 
 	for i in teams.size():
-		teams[i]["points"] = game_manager.points[i]
+		teams[i]["points"] = GameManager.points[i]
 
 	teams.sort_custom(sort_by_points_descending)
 

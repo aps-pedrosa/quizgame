@@ -40,39 +40,39 @@ func _input(event) -> void:
 			wrong1c.visible = true
 			done = true
 			if turn == 1:
-				game_manager.points[team1] += 5
+				GameManager.points[team1] += 5
 			elif turn == 2:
-				game_manager.points[team2] += 5
+				GameManager.points[team2] += 5
 
 		elif Input.is_action_just_pressed("optionA"):
 			wrong1a.visible = true
 			if turn == 1:
-				game_manager.points[team1] -= 2
+				GameManager.points[team1] -= 2
 				turn = 2
 			elif turn == 2:
-				game_manager.points[team2] -= 2
+				GameManager.points[team2] -= 2
 				turn = 1
 
 		elif Input.is_action_just_pressed("optionC"):
 			wrong1c.visible = true
 			if turn == 1:
-				game_manager.points[team1] -= 2
+				GameManager.points[team1] -= 2
 				turn = 2
 			elif turn == 2:
-				game_manager.points[team2] -= 2
+				GameManager.points[team2] -= 2
 				turn = 1
 
 		elif Input.is_action_just_pressed("optionD"):
 			wrong1d.visible = true
 			if turn == 1:
-				game_manager.points[team1] -= 2
+				GameManager.points[team1] -= 2
 				turn = 2
 			elif turn == 2:
-				game_manager.points[team2] -= 2
+				GameManager.points[team2] -= 2
 				turn = 1
 
-		print("2: ", game_manager.points[team1])
-		print("4: ", game_manager.points[team2])
+		print("2: ", GameManager.points[team1])
+		print("4: ", GameManager.points[team2])
 
 	if Input.is_action_just_pressed("ui_accept") and done == true:
 		get_tree().change_scene_to_file("res://ranks.tscn")
