@@ -2,23 +2,6 @@ extends Control
 @onready var node_2d: Node2D = $Node2D
 @onready var v_box_container: VBoxContainer = $VBoxContainer
 
-var duels = [
-	[2, 4],
-	[0, 3],
-	[1, 5],
-	[0, 2],
-	[1, 4],
-	[3, 5],
-	[0, 5],
-	[2, 5],
-	[1, 3],
-	[0, 1],
-	[3, 4],
-	[2, 3],
-	[0, 4],
-	[1, 2],
-	[4, 5]
-]
 
 var questionID = 0
 
@@ -35,7 +18,7 @@ func _process(delta: float) -> void:
 
 func _on_start_pressed() -> void:
 	questionID = 1
-	get_tree().change_scene_to_file("res://question1.tscn")
+	get_tree().change_scene_to_file("res://scenes/question1.tscn")
 
 
 func _on_rules_pressed() -> void:

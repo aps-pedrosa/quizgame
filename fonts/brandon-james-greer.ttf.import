@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://ld407tfxyrmy"
-path="res://.godot/imported/bjg-pixel-brandon-james-greer.otf-a3ef52ffaa13046173cb5fa123c6adfa.fontdata"
+uid="uid://bsvi8y5khs7nn"
+path="res://.godot/imported/brandon-james-greer.ttf-9d846f5ada77d23559a68ad346989b9e.fontdata"
 
 [deps]
 
-source_file="res://bjg-pixel-brandon-james-greer.otf"
-dest_files=["res://.godot/imported/bjg-pixel-brandon-james-greer.otf-a3ef52ffaa13046173cb5fa123c6adfa.fontdata"]
+source_file="res://fonts/brandon-james-greer.ttf"
+dest_files=["res://.godot/imported/brandon-james-greer.ttf-9d846f5ada77d23559a68ad346989b9e.fontdata"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cecpfk4pwqiiq"
-path="res://.godot/imported/teste.png-80e88854b3a28129a5b367712ed83311.ctex"
+uid="uid://c80wyehcmbnsx"
+path="res://.godot/imported/Square Buttons 26x26.png-e6f4f4c5576957cfff092f359a73ef0f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://teste.png"
-dest_files=["res://.godot/imported/teste.png-80e88854b3a28129a5b367712ed83311.ctex"]
+source_file="res://assets/tilemaps/Square Buttons 26x26.png"
+dest_files=["res://.godot/imported/Square Buttons 26x26.png-e6f4f4c5576957cfff092f359a73ef0f.ctex"]
 
 [params]
 

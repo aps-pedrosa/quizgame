@@ -75,4 +75,4 @@ func _input(event) -> void:
 		print("4: ", GameManager.points[team2])
 
 	if Input.is_action_just_pressed("ui_accept") and done == true:
-		get_tree().change_scene_to_file("res://ranks.tscn")
+		get_tree().change_scene_to_file("res://scenes/ranks.tscn")

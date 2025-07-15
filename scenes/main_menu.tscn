@@ -1,25 +1,25 @@
 [gd_scene load_steps=18 format=3 uid="uid://dcpdgnrvb1cfx"]
 
-[ext_resource type="FontFile" uid="uid://bsvi8y5khs7nn" path="res://brandon-james-greer.ttf" id="1_7vrkn"]
-[ext_resource type="Script" uid="uid://cmnwqo4kdoix5" path="res://main_menu.gd" id="1_glbon"]
-[ext_resource type="Texture2D" uid="uid://boekd1r0welgk" path="res://start_background.png" id="2_glbon"]
-[ext_resource type="Texture2D" uid="uid://cc6ar13sj88et" path="res://assets/buttons/button_start.png" id="3_nlkkf"]
-[ext_resource type="Texture2D" uid="uid://bv37rbdvvij70" path="res://assets/buttons/button_start_p.png" id="4_qe12f"]
-[ext_resource type="Texture2D" uid="uid://oucfex4iges" path="res://assets/buttons/button_start_h.png" id="5_8qtwp"]
-[ext_resource type="Texture2D" uid="uid://cvhn4kjew0enh" path="res://assets/buttons/button_regras.png" id="6_j5v2v"]
-[ext_resource type="Texture2D" uid="uid://bk6eqqi1ol6am" path="res://assets/buttons/button_regras_p.png" id="7_iotk1"]
-[ext_resource type="Texture2D" uid="uid://dld3sxk54d4hf" path="res://assets/buttons/button_regras_h.png" id="8_w44g7"]
-[ext_resource type="Texture2D" uid="uid://naheu55fmasf" path="res://assets/buttons/button_exit.png" id="9_cm266"]
-[ext_resource type="Texture2D" uid="uid://blq07roru3ckq" path="res://assets/buttons/button_exit_p.png" id="10_g8g3n"]
-[ext_resource type="Texture2D" uid="uid://dtujdhx6o0umc" path="res://assets/buttons/button_exit_h.png" id="11_8u0te"]
-[ext_resource type="Texture2D" uid="uid://c80wyehcmbnsx" path="res://Square Buttons 26x26.png" id="13_iotk1"]
-[ext_resource type="Script" uid="uid://bkg4s7mpkvlh6" path="res://game_manager.gd" id="14_w44g7"]
+[ext_resource type="Script" uid="uid://cmnwqo4kdoix5" path="res://scripts/main_menu.gd" id="1_1ajci"]
+[ext_resource type="Texture2D" uid="uid://boekd1r0welgk" path="res://assets/backgrounds/start_background.png" id="2_7b55j"]
+[ext_resource type="Texture2D" uid="uid://cc6ar13sj88et" path="res://assets/buttons/button_start.png" id="3_5pajh"]
+[ext_resource type="Texture2D" uid="uid://bv37rbdvvij70" path="res://assets/buttons/button_start_p.png" id="4_j7ex8"]
+[ext_resource type="Texture2D" uid="uid://oucfex4iges" path="res://assets/buttons/button_start_h.png" id="5_a8gd2"]
+[ext_resource type="Texture2D" uid="uid://cvhn4kjew0enh" path="res://assets/buttons/button_regras.png" id="6_hstxw"]
+[ext_resource type="Texture2D" uid="uid://bk6eqqi1ol6am" path="res://assets/buttons/button_regras_p.png" id="7_8egab"]
+[ext_resource type="Texture2D" uid="uid://dld3sxk54d4hf" path="res://assets/buttons/button_regras_h.png" id="8_gw5y6"]
+[ext_resource type="Texture2D" uid="uid://naheu55fmasf" path="res://assets/buttons/button_exit.png" id="9_svtp6"]
+[ext_resource type="Texture2D" uid="uid://blq07roru3ckq" path="res://assets/buttons/button_exit_p.png" id="10_1dfpl"]
+[ext_resource type="Texture2D" uid="uid://dtujdhx6o0umc" path="res://assets/buttons/button_exit_h.png" id="11_qywvv"]
+[ext_resource type="FontFile" uid="uid://bsvi8y5khs7nn" path="res://fonts/brandon-james-greer.ttf" id="12_3wgol"]
+[ext_resource type="Texture2D" uid="uid://c80wyehcmbnsx" path="res://assets/tilemaps/Square Buttons 26x26.png" id="13_1acrt"]
+[ext_resource type="Script" uid="uid://bkg4s7mpkvlh6" path="res://scripts/game_manager.gd" id="14_vr8o3"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jix8l"]
-texture = ExtResource("2_glbon")
+texture = ExtResource("2_7b55j")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w44g7"]
-texture = ExtResource("13_iotk1")
+texture = ExtResource("13_1acrt")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -103,7 +103,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_glbon")
+script = ExtResource("1_1ajci")
 
 [node name="Panel" type="Panel" parent="."]
 texture_filter = 1
@@ -134,25 +134,25 @@ theme_override_constants/separation = -15
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 4
-texture_normal = ExtResource("3_nlkkf")
-texture_pressed = ExtResource("4_qe12f")
-texture_hover = ExtResource("5_8qtwp")
+texture_normal = ExtResource("3_5pajh")
+texture_pressed = ExtResource("4_j7ex8")
+texture_hover = ExtResource("5_a8gd2")
 
 [node name="TextureButton2" type="TextureButton" parent="VBoxContainer"]
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 4
-texture_normal = ExtResource("6_j5v2v")
-texture_pressed = ExtResource("7_iotk1")
-texture_hover = ExtResource("8_w44g7")
+texture_normal = ExtResource("6_hstxw")
+texture_pressed = ExtResource("7_8egab")
+texture_hover = ExtResource("8_gw5y6")
 
 [node name="TextureButton3" type="TextureButton" parent="VBoxContainer"]
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 4
-texture_normal = ExtResource("9_cm266")
-texture_pressed = ExtResource("10_g8g3n")
-texture_hover = ExtResource("11_8u0te")
+texture_normal = ExtResource("9_svtp6")
+texture_pressed = ExtResource("10_1dfpl")
+texture_hover = ExtResource("11_qywvv")
 
 [node name="Label" type="Label" parent="."]
 texture_filter = 1
@@ -169,7 +169,7 @@ theme_override_colors/font_color = Color(0.984314, 0.984314, 0.964706, 1)
 theme_override_colors/font_shadow_color = Color(0.109626, 0.121935, 0.118427, 1)
 theme_override_constants/shadow_offset_x = 3
 theme_override_constants/shadow_offset_y = 2
-theme_override_fonts/font = ExtResource("1_7vrkn")
+theme_override_fonts/font = ExtResource("12_3wgol")
 theme_override_font_sizes/font_size = 25
 text = "na lata"
 horizontal_alignment = 1
@@ -189,9 +189,9 @@ offset_left = 325.0
 offset_top = 180.0
 offset_right = 453.0
 offset_bottom = 228.0
-texture_normal = ExtResource("9_cm266")
-texture_pressed = ExtResource("11_8u0te")
-texture_hover = ExtResource("10_g8g3n")
+texture_normal = ExtResource("9_svtp6")
+texture_pressed = ExtResource("11_qywvv")
+texture_hover = ExtResource("10_1dfpl")
 
 [node name="Label" type="Label" parent="Node2D"]
 texture_filter = 1
@@ -200,7 +200,7 @@ offset_top = 64.0
 offset_right = 428.0
 offset_bottom = 243.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_7vrkn")
+theme_override_fonts/font = ExtResource("12_3wgol")
 theme_override_font_sizes/font_size = 5
 text = "regras:
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id erat vitae est consequat pharetra. Ut ultricies convallis nisi, a hendrerit leo pulvinar et. Nulla magna leo, tempor sed dui lacinia, blandit consequat lorem. Phasellus eget ultricies est. Cras pellentesque laoreet ligula sed cursus. In dignissim ligula nisl."
@@ -208,7 +208,7 @@ autowrap_mode = 1
 
 [node name="GameManager" type="Node" parent="."]
 unique_name_in_owner = true
-script = ExtResource("14_w44g7")
+script = ExtResource("14_vr8o3")
 
 [connection signal="pressed" from="VBoxContainer/TextureButton" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/TextureButton2" to="." method="_on_rules_pressed"]
