@@ -3,12 +3,10 @@ extends Control
 @onready var v_box_container: VBoxContainer = $VBoxContainer
 
 
-var questionID = 0
-
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	node_2d.visible = false
+	GameManager.question = 1
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -17,7 +15,6 @@ func _process(delta: float) -> void:
 
 
 func _on_start_pressed() -> void:
-	questionID = 1
 	get_tree().change_scene_to_file("res://scenes/questions/question1.tscn")
 
 

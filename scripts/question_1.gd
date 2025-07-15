@@ -12,11 +12,12 @@ var done = true
 var turn = 0
 var times_up = false
 var team1 = 1 # pontos do time 2
-var team2 = 3 # pontos do time 4
+var team2 = 2 # pontos do time 3
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	GameManager.tema = 1
 	correct1.visible = false
 	wrong1a.visible = false
 	wrong1c.visible = false

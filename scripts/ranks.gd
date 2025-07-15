@@ -12,7 +12,25 @@ extends Control
 @onready var t_5: TextureButton = $HBoxContainer/VBoxContainer/T5
 @onready var t_6: TextureButton = $HBoxContainer/VBoxContainer/T6
 
+@onready var label_4: Label = $TileMap/Node2D/Label4
+
+
 func _ready():
+	GameManager.question += 1
+	match GameManager.tema:
+		1:
+			label_4.text = str("Satelite")
+		2:
+			label_4.text = str("Bluetooth")
+		3:
+			label_4.text = str("Wifi")
+		4:
+			label_4.text = str("Radio")
+		5:
+			label_4.text = str("RFID")
+		6:
+			label_4.text = str("Internet")
+	
 	var teams = [
 		{"name": "Team 1", "points": 12},
 		{"name": "Team 2", "points": 25},
@@ -54,5 +72,13 @@ func _ready():
 				print(name, " has ", points, " points.")
 		i += 1
 
+
 func sort_by_points_descending(a, b) -> bool:
 	return a["points"] > b["points"]
+
+var next = "res://scenes/questions/question"+str(GameManager.question+1)+".tscn"
+
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("ui_accept"):
+		get_tree().change_scene_to_file(next)
+		print(GameManager.question)
