@@ -1,6 +1,7 @@
 [gd_scene load_steps=15 format=3 uid="uid://j0x8fyvy7wb2"]
 
 [ext_resource type="Texture2D" uid="uid://b8kshppj0yaxf" path="res://assets/backgrounds/fundorfid.png" id="1_ah8ng"]
+[ext_resource type="Script" uid="uid://cg4sjxhyqsllv" path="res://scripts/question_11.gd" id="1_sdbpr"]
 [ext_resource type="Texture2D" uid="uid://c80wyehcmbnsx" path="res://assets/tilemaps/Square Buttons 26x26.png" id="2_sdbpr"]
 [ext_resource type="Script" uid="uid://c0vk3sdrbdagy" path="res://scripts/socket_listener.gd" id="3_ibgjv"]
 [ext_resource type="Texture2D" uid="uid://e62pkqay0es4" path="res://assets/grupos/grupo6sprite.png" id="5_ah8ng"]
@@ -9,88 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://bpcciv55cdi1s" path="res://assets/buttons/questions.png" id="7_gsbv0"]
 [ext_resource type="Script" uid="uid://bkg4s7mpkvlh6" path="res://scripts/game_manager.gd" id="8_7t8o4"]
 [ext_resource type="Script" uid="uid://b6kwj670qbiyx" path="res://scripts/timer.gd" id="9_slu0y"]
-
-[sub_resource type="GDScript" id="GDScript_ro881"]
-script/source = "extends Control
-@onready var correct1: Label = $VBoxContainer/HBoxContainer/Button9/Label2
-@onready var wrong1c: Label = $VBoxContainer/HBoxContainer2/Button6/Label
-@onready var wrong1d: Label = $VBoxContainer/HBoxContainer2/Button7/Label
-@onready var wrong1a: Label = $VBoxContainer/HBoxContainer/Button8/Label
-
-@onready var game_manager: Node = %GameManager
-
-@onready var timer: Timer = %Timer
-
-var done = true
-var turn = 0
-var times_up = false
-var team1 = 4
-var team2 = 5
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	GameManager.tema = 1
-	correct1.visible = false
-	wrong1a.visible = false
-	wrong1c.visible = false
-	wrong1d.visible = false
-	
-
-func _input(event) -> void:
-	if Input.is_action_just_pressed(\"player1\"):
-		turn = 1
-		done = false
-		# Input.action_press(\"start_timer\")
-	elif Input.is_action_just_pressed(\"player2\"):
-		turn = 2
-		done = false
-		# Input.action_press(\"start_timer\")
-	elif done == false:
-		if Input.is_action_just_pressed(\"optionA\"):
-			correct1.visible = true
-			wrong1a.visible = true
-			wrong1d.visible = true
-			wrong1c.visible = true
-			done = true
-			if turn == 1:
-				GameManager.points[team1] += 5
-			elif turn == 2:
-				GameManager.points[team2] += 5
-
-		elif Input.is_action_just_pressed(\"optionB\"):
-			wrong1a.visible = true
-			if turn == 1:
-				GameManager.points[team1] -= 2
-				turn = 2
-			elif turn == 2:
-				GameManager.points[team2] -= 2
-				turn = 1
-
-		elif Input.is_action_just_pressed(\"optionC\"):
-			wrong1c.visible = true
-			if turn == 1:
-				GameManager.points[team1] -= 2
-				turn = 2
-			elif turn == 2:
-				GameManager.points[team2] -= 2
-				turn = 1
-
-		elif Input.is_action_just_pressed(\"optionD\"):
-			wrong1d.visible = true
-			if turn == 1:
-				GameManager.points[team1] -= 2
-				turn = 2
-			elif turn == 2:
-				GameManager.points[team2] -= 2
-				turn = 1
-
-		print(\"2: \", GameManager.points[team1])
-		print(\"4: \", GameManager.points[team2])
-
-	if Input.is_action_just_pressed(\"ui_accept\") and done == true:
-		get_tree().change_scene_to_file(\"res://scenes/ranks.tscn\")
-"
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_so5y4"]
 texture = ExtResource("1_ah8ng")
@@ -201,7 +120,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = SubResource("GDScript_ro881")
+script = ExtResource("1_sdbpr")
 
 [node name="Panel" type="Panel" parent="."]
 texture_filter = 1

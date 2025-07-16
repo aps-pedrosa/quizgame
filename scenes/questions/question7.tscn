@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://bl34esmm0r3vx"]
 
-[ext_resource type="Script" uid="uid://ci7u2k0re6mno" path="res://scenes/questions/question_9.gd" id="1_7p6ow"]
+[ext_resource type="Script" uid="uid://ci7u2k0re6mno" path="res://scripts/question_9.gd" id="1_7p6ow"]
 [ext_resource type="Texture2D" uid="uid://ciq7o1iwg5jrt" path="res://assets/backgrounds/fundoradio.png" id="2_7p6ow"]
 [ext_resource type="Texture2D" uid="uid://c80wyehcmbnsx" path="res://assets/tilemaps/Square Buttons 26x26.png" id="3_rpfb5"]
 [ext_resource type="Script" uid="uid://c0vk3sdrbdagy" path="res://scripts/socket_listener.gd" id="4_tkkxt"]
