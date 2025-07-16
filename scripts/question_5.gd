@@ -25,52 +25,52 @@ func _ready() -> void:
 
 
 func _input(event) -> void:
-	if Input.is_action_just_pressed("player1"):
-		turn = 1
-		done = false
-		# Input.action_press("start_timer")
-	elif Input.is_action_just_pressed("player2"):
-		turn = 2
-		done = false
-		# Input.action_press("start_timer")
-	elif done == false:
-		if Input.is_action_just_pressed("optionA"):
-			correct1.add_theme_color_override("font_color", '#a4c263')
-			wrong1a.add_theme_color_override("font_color", '#823a48')
-			wrong1c.add_theme_color_override("font_color", '#823a48')
-			wrong1d.add_theme_color_override("font_color", '#823a48')
-			done = true
-			if turn == 1:
-				GameManager.points[team1] += 5
-			elif turn == 2:
-				GameManager.points[team2] += 5
+	match GameManager.player:
+		"player1":
+			turn = 1
+			done = false
+		"player2":
+			turn = 2
+			done = false
+	if done == false:
+		match GameManager.option:
+			"optionA":
+				correct1.add_theme_color_override("font_color", '#a4c263')
+				wrong1a.add_theme_color_override("font_color", '#823a48')
+				wrong1c.add_theme_color_override("font_color", '#823a48')
+				wrong1d.add_theme_color_override("font_color", '#823a48')
+				done = true
+				if turn == 1:
+					GameManager.points[team1] += 5
+				elif turn == 2:
+					GameManager.points[team2] += 5
 
-		elif Input.is_action_just_pressed("optionB"):
-			wrong1a.add_theme_color_override("font_color", '#823a48')
-			if turn == 1:
-				GameManager.points[team1] -= 2
-				turn = 2
-			elif turn == 2:
-				GameManager.points[team2] -= 2
-				turn = 1
+			"optionB":
+				wrong1a.add_theme_color_override("font_color", '#823a48')
+				if turn == 1:
+					GameManager.points[team1] -= 2
+					turn = 2
+				elif turn == 2:
+					GameManager.points[team2] -= 2
+					turn = 1
 
-		elif Input.is_action_just_pressed("optionC"):
-			wrong1c.add_theme_color_override("font_color", '#823a48')
-			if turn == 1:
-				GameManager.points[team1] -= 2
-				turn = 2
-			elif turn == 2:
-				GameManager.points[team2] -= 2
-				turn = 1
+			"optionC":
+				wrong1c.add_theme_color_override("font_color", '#823a48')
+				if turn == 1:
+					GameManager.points[team1] -= 2
+					turn = 2
+				elif turn == 2:
+					GameManager.points[team2] -= 2
+					turn = 1
 
-		elif Input.is_action_just_pressed("optionD"):
-			wrong1d.add_theme_color_override("font_color", '#823a48')
-			if turn == 1:
-				GameManager.points[team1] -= 2
-				turn = 2
-			elif turn == 2:
-				GameManager.points[team2] -= 2
-				turn = 1
+			"optionD":
+				wrong1d.add_theme_color_override("font_color", '#823a48')
+				if turn == 1:
+					GameManager.points[team1] -= 2
+					turn = 2
+				elif turn == 2:
+					GameManager.points[team2] -= 2
+					turn = 1
 
 		print("2: ", GameManager.points[team1])
 		print("4: ", GameManager.points[team2])

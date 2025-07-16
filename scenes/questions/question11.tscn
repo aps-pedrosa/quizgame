@@ -186,8 +186,10 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0.109804, 0.121569, 0.117647, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_8yi1w")
-theme_override_font_sizes/font_size = 8
-text = "Reativo"
+theme_override_font_sizes/font_size = 6
+text = "STA -- AP --
+roteador --
+internet"
 icon = ExtResource("7_gsbv0")
 flat = true
 icon_alignment = 1
@@ -201,17 +203,19 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -44.0
-offset_top = -16.0
-offset_right = 44.0
-offset_bottom = 16.0
+offset_left = -84.0
+offset_top = -24.0
+offset_right = 85.0
+offset_bottom = 24.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(0.643137, 0.760784, 0.388235, 1)
+theme_override_colors/font_color = Color(0.509804, 0.227451, 0.282353, 1)
 theme_override_constants/line_spacing = 0
 theme_override_fonts/font = ExtResource("6_8yi1w")
-theme_override_font_sizes/font_size = 8
-text = "Reativo"
+theme_override_font_sizes/font_size = 6
+text = "STA -- AP --
+roteador --
+internet"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -227,31 +231,35 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0.109804, 0.121569, 0.117647, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_8yi1w")
-theme_override_font_sizes/font_size = 8
-text = "Passivo"
+theme_override_font_sizes/font_size = 6
+text = "Dispositivo -- torre --
+nucleo operadora --
+Internet --"
 icon = ExtResource("7_gsbv0")
 flat = true
 icon_alignment = 1
 script = SubResource("GDScript_kf5vr")
 
-[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer/Button9"]
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Button9"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -11.5
-offset_right = 20.0
-offset_bottom = 11.5
+offset_left = -93.0
+offset_top = -32.0
+offset_right = 93.0
+offset_bottom = 32.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(0.509804, 0.227451, 0.282353, 1)
+theme_override_colors/font_color = Color(0.643137, 0.760784, 0.388235, 1)
 theme_override_constants/line_spacing = 0
 theme_override_fonts/font = ExtResource("6_8yi1w")
-theme_override_font_sizes/font_size = 8
-text = "Passivo"
+theme_override_font_sizes/font_size = 6
+text = "Dispositivo -- torre --
+nucleo operadora --
+Internet --"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -272,8 +280,10 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0.109804, 0.121569, 0.117647, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_8yi1w")
-theme_override_font_sizes/font_size = 8
-text = "Semipassivo"
+theme_override_font_sizes/font_size = 6
+text = "STA -- switch --
+servidor DNS --
+Internet --"
 icon = ExtResource("7_gsbv0")
 flat = true
 icon_alignment = 1
@@ -288,16 +298,18 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -82.0
-offset_top = -24.0
+offset_top = -32.0
 offset_right = 82.0
-offset_bottom = 24.0
+offset_bottom = 32.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.509804, 0.227451, 0.282353, 1)
 theme_override_constants/line_spacing = 0
 theme_override_fonts/font = ExtResource("6_8yi1w")
-theme_override_font_sizes/font_size = 8
-text = "Semipassivo"
+theme_override_font_sizes/font_size = 6
+text = "STA -- switch --
+servidor DNS --
+Internet --"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -313,8 +325,9 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0.109804, 0.121569, 0.117647, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_8yi1w")
-theme_override_font_sizes/font_size = 8
-text = "Ativo"
+theme_override_font_sizes/font_size = 6
+text = "Nenhuma das
+alternativas acima"
 icon = ExtResource("7_gsbv0")
 flat = true
 icon_alignment = 1
@@ -328,17 +341,18 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -40.0
+offset_left = -69.5
 offset_top = -16.0
-offset_right = 40.0
+offset_right = 67.5
 offset_bottom = 16.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.509804, 0.227451, 0.282353, 1)
 theme_override_constants/line_spacing = 0
 theme_override_fonts/font = ExtResource("6_8yi1w")
-theme_override_font_sizes/font_size = 8
-text = "Ativo"
+theme_override_font_sizes/font_size = 6
+text = "Nenhuma das
+alternativas acima"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -352,7 +366,7 @@ offset_bottom = 86.0
 theme_override_colors/font_color = Color(0.109804, 0.121569, 0.117647, 1)
 theme_override_fonts/font = ExtResource("6_8yi1w")
 theme_override_font_sizes/font_size = 9
-text = "Qual desses nao e um tipo de sistema RFID? "
+text = "Qual alternativa melhor descreve a topologia para redes de celular?"
 horizontal_alignment = 1
 autowrap_mode = 1
 

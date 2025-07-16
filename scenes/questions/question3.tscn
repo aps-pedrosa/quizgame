@@ -244,12 +244,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -122.0
-offset_top = -23.0
-offset_right = 122.0
-offset_bottom = 37.0
+offset_left = -119.0
+offset_top = -30.0
+offset_right = 125.0
+offset_bottom = 30.0
 grow_horizontal = 2
 grow_vertical = 2
+pivot_offset = Vector2(153, 34)
 theme_override_colors/font_color = Color(0.643137, 0.760784, 0.388235, 1)
 theme_override_constants/line_spacing = 0
 theme_override_constants/paragraph_spacing = 0
@@ -258,11 +259,8 @@ theme_override_constants/shadow_offset_y = 0
 theme_override_constants/outline_size = 0
 theme_override_constants/shadow_outline_size = 0
 theme_override_fonts/font = ExtResource("7_npwvc")
-theme_override_font_sizes/font_size = 7
-text = "Completa uma volta
-ao redor da
-Terra a cada 12 horas
-"
+theme_override_font_sizes/font_size = 8
+text = "S-band"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -298,9 +296,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -213.0
-offset_top = -12.0
+offset_top = -20.0
 offset_right = 213.0
-offset_bottom = 24.0
+offset_bottom = 16.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.509804, 0.227451, 0.282353, 1)
@@ -311,10 +309,8 @@ theme_override_constants/shadow_offset_y = 0
 theme_override_constants/outline_size = 0
 theme_override_constants/shadow_outline_size = 0
 theme_override_fonts/font = ExtResource("7_npwvc")
-theme_override_font_sizes/font_size = 7
-text = "Fica sempre sobre o
-mesmo ponto do planeta
-"
+theme_override_font_sizes/font_size = 8
+text = "Ku-band"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -344,10 +340,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -103.0
-offset_top = -16.0
-offset_right = 104.0
-offset_bottom = 16.0
+offset_left = -99.0
+offset_top = -18.0
+offset_right = 108.0
+offset_bottom = 14.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.509804, 0.227451, 0.282353, 1)
@@ -359,8 +355,7 @@ theme_override_constants/outline_size = 0
 theme_override_constants/shadow_outline_size = 0
 theme_override_fonts/font = ExtResource("7_npwvc")
 theme_override_font_sizes/font_size = 8
-text = "E usado apenas para
-fins militares"
+text = "Ka-band"
 horizontal_alignment = 1
 vertical_alignment = 1
 

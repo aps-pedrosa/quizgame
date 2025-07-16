@@ -6,7 +6,6 @@ extends Control
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	node_2d.visible = false
-	GameManager.question = 1
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -15,7 +14,7 @@ func _process(delta: float) -> void:
 
 
 func _on_start_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/questions/question1.tscn")
+	get_tree().change_scene_to_file("res://scenes/ranks.tscn")
 
 
 func _on_rules_pressed() -> void:

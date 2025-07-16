@@ -1,8 +1,8 @@
 extends Control
-@onready var correct1: Label = $VBoxContainer/HBoxContainer/Button8/Label
+@onready var correct1: Label = $VBoxContainer/HBoxContainer/Button9/Label
 @onready var wrong1c: Label = $VBoxContainer/HBoxContainer2/Button6/Label
 @onready var wrong1d: Label = $VBoxContainer/HBoxContainer2/Button7/Label
-@onready var wrong1a: Label = $VBoxContainer/HBoxContainer/Button9/Label2
+@onready var wrong1a: Label = $VBoxContainer/HBoxContainer/Button8/Label
 
 @onready var game_manager: Node = %GameManager
 
@@ -25,52 +25,52 @@ func _ready() -> void:
 	
 
 func _input(event) -> void:
-	if Input.is_action_just_pressed("player1"):
-		turn = 1
-		done = false
-		# Input.action_press("start_timer")
-	elif Input.is_action_just_pressed("player2"):
-		turn = 2
-		done = false
-		# Input.action_press("start_timer")
-	elif done == false:
-		if Input.is_action_just_pressed("optionA"):
-			correct1.visible = true
-			wrong1a.visible = true
-			wrong1d.visible = true
-			wrong1c.visible = true
-			done = true
-			if turn == 1:
-				GameManager.points[team1] += 5
-			elif turn == 2:
-				GameManager.points[team2] += 5
+	match GameManager.player:
+		"player1":
+			turn = 1
+			done = false
+		"player2":
+			turn = 2
+			done = false
+	if done == false:
+		match GameManager.option:
+			"optionB":
+				correct1.visible = true
+				wrong1a.visible = true
+				wrong1d.visible = true
+				wrong1c.visible = true
+				done = true
+				if turn == 1:
+					GameManager.points[team1] += 5
+				elif turn == 2:
+					GameManager.points[team2] += 5
 
-		elif Input.is_action_just_pressed("optionB"):
-			wrong1a.visible = true
-			if turn == 1:
-				GameManager.points[team1] -= 2
-				turn = 2
-			elif turn == 2:
-				GameManager.points[team2] -= 2
-				turn = 1
+			"optionA":
+				wrong1a.visible = true
+				if turn == 1:
+					GameManager.points[team1] -= 2
+					turn = 2
+				elif turn == 2:
+					GameManager.points[team2] -= 2
+					turn = 1
 
-		elif Input.is_action_just_pressed("optionC"):
-			wrong1c.visible = true
-			if turn == 1:
-				GameManager.points[team1] -= 2
-				turn = 2
-			elif turn == 2:
-				GameManager.points[team2] -= 2
-				turn = 1
+			"optionC":
+				wrong1c.visible = true
+				if turn == 1:
+					GameManager.points[team1] -= 2
+					turn = 2
+				elif turn == 2:
+					GameManager.points[team2] -= 2
+					turn = 1
 
-		elif Input.is_action_just_pressed("optionD"):
-			wrong1d.visible = true
-			if turn == 1:
-				GameManager.points[team1] -= 2
-				turn = 2
-			elif turn == 2:
-				GameManager.points[team2] -= 2
-				turn = 1
+			"optionD":
+				wrong1d.visible = true
+				if turn == 1:
+					GameManager.points[team1] -= 2
+					turn = 2
+				elif turn == 2:
+					GameManager.points[team2] -= 2
+					turn = 1
 
 		print("2: ", GameManager.points[team1])
 		print("4: ", GameManager.points[team2])

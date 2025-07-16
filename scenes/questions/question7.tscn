@@ -1,11 +1,11 @@
 [gd_scene load_steps=15 format=3 uid="uid://bl34esmm0r3vx"]
 
-[ext_resource type="Script" uid="uid://ci7u2k0re6mno" path="res://scripts/question_9.gd" id="1_7p6ow"]
+[ext_resource type="Script" uid="uid://bqqcuycy35aqi" path="res://scripts/question_9.gd" id="1_7p6ow"]
 [ext_resource type="Texture2D" uid="uid://ciq7o1iwg5jrt" path="res://assets/backgrounds/fundoradio.png" id="2_7p6ow"]
 [ext_resource type="Texture2D" uid="uid://c80wyehcmbnsx" path="res://assets/tilemaps/Square Buttons 26x26.png" id="3_rpfb5"]
 [ext_resource type="Script" uid="uid://c0vk3sdrbdagy" path="res://scripts/socket_listener.gd" id="4_tkkxt"]
-[ext_resource type="Texture2D" uid="uid://bcocpqx64ow8w" path="res://assets/grupos/grupo1sprite.png" id="5_0pcv4"]
 [ext_resource type="Texture2D" uid="uid://e4kcvdex4r15" path="res://assets/grupos/grupo2sprite.png" id="5_7mblb"]
+[ext_resource type="Texture2D" uid="uid://e62pkqay0es4" path="res://assets/grupos/grupo6sprite.png" id="6_7p6ow"]
 [ext_resource type="FontFile" uid="uid://ld407tfxyrmy" path="res://fonts/bjg-pixel-brandon-james-greer.otf" id="7_qwvak"]
 [ext_resource type="Texture2D" uid="uid://bpcciv55cdi1s" path="res://assets/buttons/questions.png" id="8_3exbb"]
 [ext_resource type="Script" uid="uid://bkg4s7mpkvlh6" path="res://scripts/game_manager.gd" id="9_n6ccx"]
@@ -159,7 +159,7 @@ layout_mode = 2
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 2
-icon = ExtResource("5_0pcv4")
+icon = ExtResource("5_7mblb")
 flat = true
 
 [node name="Button2" type="Button" parent="VBoxContainer/HBoxContainer3"]
@@ -167,7 +167,7 @@ texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 10
 size_flags_vertical = 4
-icon = ExtResource("5_7mblb")
+icon = ExtResource("6_7p6ow")
 flat = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
@@ -235,14 +235,14 @@ theme_override_colors/font_color = Color(0.109804, 0.121569, 0.117647, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("7_qwvak")
 theme_override_font_sizes/font_size = 8
-text = "Pulsos elétricos
+text = "Pulsos eletricos
 no ar (wireless)"
 icon = ExtResource("8_3exbb")
 flat = true
 icon_alignment = 1
 script = SubResource("GDScript_kf5vr")
 
-[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer/Button9"]
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Button9"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -255,7 +255,7 @@ offset_right = 231.0
 offset_bottom = 27.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(0.509804, 0.227451, 0.282353, 1)
+theme_override_colors/font_color = Color(0.643137, 0.760784, 0.388235, 1)
 theme_override_constants/line_spacing = 0
 theme_override_constants/paragraph_spacing = 0
 theme_override_constants/shadow_offset_x = 0
@@ -264,7 +264,7 @@ theme_override_constants/outline_size = 0
 theme_override_constants/shadow_outline_size = 0
 theme_override_fonts/font = ExtResource("7_qwvak")
 theme_override_font_sizes/font_size = 8
-text = "Pulsos elétricos
+text = "Pulsos eletricos
 no ar (wireless)"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -308,7 +308,7 @@ offset_right = 76.0
 offset_bottom = 27.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(0.643137, 0.760784, 0.388235, 1)
+theme_override_colors/font_color = Color(0.509804, 0.227451, 0.282353, 1)
 theme_override_constants/line_spacing = 0
 theme_override_constants/paragraph_spacing = 0
 theme_override_constants/shadow_offset_x = 0
@@ -385,7 +385,7 @@ offset_bottom = 131.0
 theme_override_colors/font_color = Color(0.109804, 0.121569, 0.117647, 1)
 theme_override_fonts/font = ExtResource("7_qwvak")
 theme_override_font_sizes/font_size = 10
-text = "Como o Wi-Fi envia dados"
+text = "Como os dados conseguem ser transmitidos na tecnologia RFID? "
 horizontal_alignment = 1
 autowrap_mode = 1
 

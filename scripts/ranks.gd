@@ -85,7 +85,7 @@ func _ready():
 func sort_by_points_descending(a, b) -> bool:
 	return a["points"] > b["points"]
 
-var next = "res://scenes/questions/question"+str(GameManager.question+1)+".tscn"
+var next = "res://scenes/questions/question"+str(GameManager.question)+".tscn"
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
