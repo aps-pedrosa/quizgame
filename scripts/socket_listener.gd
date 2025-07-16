@@ -19,4 +19,14 @@ func _process(_delta):
 	if client and client.get_available_bytes() > 0:
 		data = client.get_utf8_string(client.get_available_bytes())
 		if data == "player1":
-			GameManager.player1 = "player1"
+			GameManager.player = "player1"
+		if data == "player2":
+			GameManager.player = "player2"
+		if data == "optionA":
+			GameManager.option = "optionA"
+		if data == "optionB":
+			GameManager.option = "optionB"
+		if data == "optionC":
+			GameManager.option = "optionC"
+		if data == "optionD":
+			GameManager.option = "optionD"
