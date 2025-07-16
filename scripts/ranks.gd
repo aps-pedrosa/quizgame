@@ -12,7 +12,7 @@ extends Control
 @onready var t_5: TextureButton = $HBoxContainer/VBoxContainer/T5
 @onready var t_6: TextureButton = $HBoxContainer/VBoxContainer/T6
 
-@onready var label_4: Label = $TileMap/Node2D/Label4
+@onready var label_t: Label = $TileMap/Node2D/Label4
 
 @onready var label_n: Label = $TileMap/Label3
 
@@ -26,19 +26,19 @@ func _ready():
 	else:
 		label_n.text = str(number)
 	
-	match GameManager.tema:
-		1:
-			label_4.text = str("Satelite")
-		2:
-			label_4.text = str("Bluetooth")
-		3:
-			label_4.text = str("Wifi")
-		4:
-			label_4.text = str("Radio")
-		5:
-			label_4.text = str("RFID")
-		6:
-			label_4.text = str("Internet")
+	match GameManager.question:
+		1,2,3:
+			label_t.text = str("Satelite")
+		4,5,6:
+			label_t.text = str("Bluetooth")
+		7,8,9:
+			label_t.text = str("Wifi")
+		10,11,12:
+			label_t.text = str("Radio")
+		13,14,15:
+			label_t.text = str("RFID")
+		16,17,18:
+			label_t.text = str("Internet")
 	
 	var teams = [
 		{"name": "Team 1", "points": 12},
