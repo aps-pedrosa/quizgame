@@ -14,9 +14,18 @@ extends Control
 
 @onready var label_4: Label = $TileMap/Node2D/Label4
 
+@onready var label_n: Label = $TileMap/Label3
+
 
 func _ready():
 	GameManager.question += 1
+	
+	var number = str(GameManager.question)
+	if GameManager.question < 10:
+		label_n.text = str("0"+number)
+	else:
+		label_n.text = str(number)
+	
 	match GameManager.tema:
 		1:
 			label_4.text = str("Satelite")

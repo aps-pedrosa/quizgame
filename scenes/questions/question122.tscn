@@ -1,11 +1,11 @@
-[gd_scene load_steps=15 format=3 uid="uid://ddb7rwfpw4n6n"]
+[gd_scene load_steps=15 format=3 uid="uid://bf5t0lvr8yt8p"]
 
-[ext_resource type="Script" uid="uid://cj2cfvovmm2i6" path="res://scenes/questions/question_1.gd" id="1_fralc"]
+[ext_resource type="Script" uid="uid://dakbt4h6pxq66" path="res://scripts/question_8.gd" id="1_fralc"]
 [ext_resource type="Texture2D" uid="uid://bf7q40ed7eisv" path="res://assets/backgrounds/fundowifi.png" id="2_b2imk"]
 [ext_resource type="Texture2D" uid="uid://c80wyehcmbnsx" path="res://assets/tilemaps/Square Buttons 26x26.png" id="3_iilkq"]
 [ext_resource type="Script" uid="uid://c0vk3sdrbdagy" path="res://scripts/socket_listener.gd" id="4_f14ik"]
 [ext_resource type="Texture2D" uid="uid://e4kcvdex4r15" path="res://assets/grupos/grupo2sprite.png" id="5_nxckp"]
-[ext_resource type="Texture2D" uid="uid://ukyu5hxdhvy8" path="res://assets/grupos/grupo3sprite.png" id="6_fralc"]
+[ext_resource type="Texture2D" uid="uid://qkjt47d6l64r" path="res://assets/grupos/grupo4sprite.png" id="6_sus1p"]
 [ext_resource type="FontFile" uid="uid://ld407tfxyrmy" path="res://fonts/bjg-pixel-brandon-james-greer.otf" id="7_tq3kb"]
 [ext_resource type="Texture2D" uid="uid://bpcciv55cdi1s" path="res://assets/buttons/questions.png" id="8_up7i4"]
 [ext_resource type="Script" uid="uid://bkg4s7mpkvlh6" path="res://scripts/game_manager.gd" id="9_mlj8t"]
@@ -166,7 +166,7 @@ texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 10
 size_flags_vertical = 4
-icon = ExtResource("6_fralc")
+icon = ExtResource("6_sus1p")
 flat = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
@@ -245,7 +245,7 @@ offset_right = 20.0
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(0.509804, 0.227451, 0.282353, 1)
+theme_override_colors/font_color = Color(0.643137, 0.760784, 0.388235, 1)
 theme_override_fonts/font = ExtResource("7_tq3kb")
 theme_override_font_sizes/font_size = 16
 text = "DNS"
@@ -330,7 +330,7 @@ offset_right = 40.0
 offset_bottom = 16.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(0.643137, 0.760784, 0.388235, 1)
+theme_override_colors/font_color = Color(0.509804, 0.227451, 0.282353, 1)
 theme_override_fonts/font = ExtResource("7_tq3kb")
 theme_override_font_sizes/font_size = 16
 text = "HTTP"

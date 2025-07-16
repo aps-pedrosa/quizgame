@@ -2,7 +2,6 @@ extends Node
 
 var server := TCPServer.new()
 var client : StreamPeerTCP
-var data
 
 func _ready():
 	var err = server.listen(65432)
@@ -17,6 +16,6 @@ func _process(_delta):
 		print("Cliente conectado!")
 
 	if client and client.get_available_bytes() > 0:
-		data = client.get_utf8_string(client.get_available_bytes())
-		if data == "player1":
+		var data = client.get_utf8_string(client.get_available_bytes())
+		if data == "optionA":
 			print("Hello, World!")
