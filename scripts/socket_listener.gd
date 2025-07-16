@@ -19,4 +19,4 @@ func _process(_delta):
 	if client and client.get_available_bytes() > 0:
 		data = client.get_utf8_string(client.get_available_bytes())
 		if data == "player1":
-			print("Hello, World!")
+			GameManager.player1 = "player1"

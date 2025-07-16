@@ -24,16 +24,16 @@ func _ready() -> void:
 	wrong1d.visible = false
 
 
-func _input(event) -> void:
-	if Input.is_action_just_pressed("player1"):
-		turn = 1
-		done = false
-		# Input.action_press("start_timer")
-	elif Input.is_action_just_pressed("player2"):
-		turn = 2
-		done = false
-		# Input.action_press("start_timer")
-	elif done == false:
+func _process(delta: float) -> void:
+	# print(GameManager.input)
+	match GameManager.player1:
+		"player1":
+			turn = 1
+			done = false
+		"player2":
+			turn = 2
+			done = false
+	if done == false:
 		if Input.is_action_just_pressed("optionD"):
 			correct1.visible = true
 			wrong1a.visible = true
@@ -75,5 +75,5 @@ func _input(event) -> void:
 		print("2: ", GameManager.points[team1])
 		print("4: ", GameManager.points[team2])
 
-	if Input.is_action_just_pressed("ui_accept") and done == true:
+	if Input.is_action_just_pressed("ui_accept"):
 		get_tree().change_scene_to_file("res://scenes/ranks.tscn")

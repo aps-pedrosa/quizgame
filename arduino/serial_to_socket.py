@@ -1,7 +1,7 @@
 import serial
 import socket
 
-SERIAL_PORT = 'COM7'  # ⚠️ Troque pela porta do seu Arduino
+SERIAL_PORT = 'COM5'  # ⚠️ Troque pela porta do seu Arduino
 BAUD_RATE = 9600
 
 HOST = 'localhost'
